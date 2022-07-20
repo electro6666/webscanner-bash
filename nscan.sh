@@ -1,7 +1,14 @@
+apt install python
+clear
+apt install python3
+clear
 pip install lolcat 
+clear
 apt update && apt upgrade -y
+clear
 apt install hr -y
 apt install figlet -y
+clear
 apt install lolcat -y
 clear
 figlet nscan |lolcat
