@@ -1,3 +1,4 @@
+apt update && apt upgrade -y
 apt install hr -y
 apt install figlet -y
 apt install lolcat -y
