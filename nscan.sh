@@ -1,3 +1,4 @@
+pip install lolcat 
 apt update && apt upgrade -y
 apt install hr -y
 apt install figlet -y
