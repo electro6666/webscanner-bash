@@ -18,6 +18,8 @@ apt  install dnsutils -y
 clear
 apt install dirb -y
 clear
+apt install whois -y
+clear
 echo -e "${RED}enter site:${ENDCOLOR}"
 read site
 clear
