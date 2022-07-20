@@ -20,7 +20,7 @@ apt install dirb -y
 clear
 apt install whois -y
 clear
-echo -e "${RED}enter site:${ENDCOLOR}"
+echo -e "${RED}Enter Target:${ENDCOLOR}"
 read site
 clear
 figlet -f smslant  nscan |lolcat
