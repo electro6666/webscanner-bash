@@ -40,6 +40,7 @@ whois $site
 whois -a $site
 hr #
 sleep 1
+# you can add another ports
 nmap -v  -p 80,22,25,53,6881,6999 --script http-sql-injection $site
 hr #
 sleep 1
