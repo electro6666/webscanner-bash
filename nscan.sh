@@ -37,33 +37,33 @@ echo -e "${GREEN}________________________nscan by electro566_____${ENDCOLOR}"
 hr #
 hr #
 echo $site
-host $site
+host http://$site
 hr #
 sleep 1
-echo $site
-traceroute $site
+echo http://$site
+traceroute http://$site
 hr #
 sleep 1
-echo $site
-whois $site
-whois -a $site
+echo http://$site
+whois http://$site
+whois -a http://$site
 hr #
 sleep 1
 # you can add another ports
-nmap -v  -p 80,22,25,53,6881,6999 --script http-sql-injection $site
+nmap -v  -p 80,22,25,53,6881,6999 --script http-sql-injection http://$site
 hr #
 sleep 1
-nmap -v  -Pn --script vuln $site
+nmap -v  -Pn --script vuln http://$site
 hr #
-nmap -T4 -A -v $site
+nmap -T4 -A -v http://$site
 sleep 1
-nmap -sV -v   --script=http-malware-host $site
-hr #
-sleep 1
-nmap -v  $site --script whois-ip
+nmap -sV -v   --script=http-malware-host http://$site
 hr #
 sleep 1
-nmap -v  --script http-sitemap-generator.nse $site
+nmap -v  http://$site --script whois-ip
+hr #
+sleep 1
+nmap -v  --script http-sitemap-generator.nse http://$site
 hr #
 echo 'wait........'
 sleep 3
