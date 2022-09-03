@@ -27,4 +27,6 @@ cd webscanner-bash
 
 chmod +x *
 
-./nscan.sh
+Usage> ./nscan.sh
+
+url> without http:// or https://
