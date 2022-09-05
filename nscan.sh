@@ -66,5 +66,5 @@ sleep 1
 nmap -v  --script http-sitemap-generator.nse http://$site
 hr #
 echo 'wait........'
-sleep 3
-dirb http://$site
+sleep 4
+dirb http://$site -f
