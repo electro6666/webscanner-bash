@@ -1,12 +1,14 @@
+apt update && apt upgrade -y
 apt install python
 clear
 apt install python3
 clear
 pip install lolcat 
 clear
-apt update && apt upgrade -y
-clear
 apt install hr -y
+clear
+apt install w3m -y
+clear
 apt install figlet -y
 clear
 apt install lolcat -y
@@ -45,6 +47,7 @@ traceroute http://$site
 hr #
 sleep 1
 echo http://$site
+w3m -dump_head | grep "^HTTP\/"
 whois $site | grep 'Name Server'
 whois -a http://$site
 hr #
