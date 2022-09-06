@@ -45,7 +45,7 @@ traceroute http://$site
 hr #
 sleep 1
 echo http://$site
-whois http://$site
+whois $site | grep 'Name Server'
 whois -a http://$site
 hr #
 sleep 1
