@@ -39,11 +39,11 @@ echo -e "${GREEN}________________________nscan by electro566_____${ENDCOLOR}"
 hr #
 hr #
 echo $site
-host http://$site
+host $site
 hr #
 sleep 1
 echo http://$site
-traceroute http://$site
+traceroute $site
 hr #
 sleep 1
 echo http://$site
