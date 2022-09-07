@@ -47,27 +47,27 @@ traceroute $site
 hr #
 sleep 1
 echo http://$site
-w3m -dump_head http://$site| grep "^HTTP\/"
+w3m -dump_head $site| grep "^HTTP\/"
 whois $site | grep 'Name Server'
-whois -a http://$site
+whois -a $site
 hr #
 sleep 1
 # you can add another ports
-nmap -v  -p 80,22,25,53,6881,6999 --script http-sql-injection http://$site
+nmap -v  -p 80,22,25,53,6881,6999 --script http-sql-injection $site
 hr #
 sleep 1
-nmap -v  -Pn --script vuln http://$site
+nmap -v  -Pn --script vuln $site
 hr #
-nmap -T4 -A -v http://$site
+nmap -T4 -A -v $site
 sleep 1
-nmap -sV -v   --script=http-malware-host http://$site
-hr #
-sleep 1
-nmap -v  http://$site --script whois-ip
+nmap -sV -v   --script=http-malware-host $site
 hr #
 sleep 1
-nmap -v  --script http-sitemap-generator.nse http://$site
+nmap -v  $site --script whois-ip
 hr #
-echo 'wait........'
+sleep 1
+nmap -v  --script http-sitemap-generator.nse $site
+hr #
+echo 'wait........' 
 sleep 4
 dirb http://$site -f
