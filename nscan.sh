@@ -47,7 +47,7 @@ traceroute http://$site
 hr #
 sleep 1
 echo http://$site
-w3m -dump_head | grep "^HTTP\/"
+w3m -dump_head http://$site| grep "^HTTP\/"
 whois $site | grep 'Name Server'
 whois -a http://$site
 hr #
