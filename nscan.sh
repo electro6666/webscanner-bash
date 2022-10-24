@@ -5,8 +5,6 @@ apt install python3
 clear
 pip install lolcat 
 clear
-apt install hr -y
-clear
 apt install w3m -y
 clear
 apt install figlet -y
@@ -17,7 +15,6 @@ figlet nscan |lolcat
 RED="\e[31m"
 GREEN="\e[32m"
 ENDCOLOR="\e[0m"
-apt update && upgrade
 clear
 apt install nmap -y
 clear
@@ -36,38 +33,28 @@ read site
 clear
 figlet -f smslant  nscan |lolcat
 echo -e "${GREEN}________________________nscan by electro566_____${ENDCOLOR}"
-hr #
-hr #
 echo $site
 host $site
-hr #
 sleep 1
 echo http://$site
 traceroute $site
-hr #
 sleep 1
 echo http://$site
 w3m -dump_head $site| grep "^HTTP\/"
 whois $site | grep 'Name Server'
 whois -a $site
-hr #
 sleep 1
 # you can add another ports
 nmap -v  -p 80,22,25,53,6881,6999 --script http-sql-injection $site
-hr #
 sleep 1
 nmap -v  -Pn --script vuln $site
-hr #
 nmap -T4 -A -v $site
 sleep 1
 nmap -sV -v   --script=http-malware-host $site
-hr #
 sleep 1
 nmap -v  $site --script whois-ip
-hr #
 sleep 1
 nmap -v  --script http-sitemap-generator.nse $site
-hr #
 echo 'wait........' 
 sleep 4
 dirb http://$site -f
