@@ -25,8 +25,12 @@ git clone https://github.com/electro6666/webscanner-bash
 
 cd webscanner-bash
 
-chmod +x *
+
+
+chmiod +x *
+
 
 Usage> ./nscan.sh
+
 
 url> without http:// or https://
